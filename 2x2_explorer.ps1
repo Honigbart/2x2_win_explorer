@@ -3,8 +3,8 @@ param(
   [string]$Folder2 = "F:\AppDev\kanbart",
   [string]$Folder3 = "C:\Users\wojor\Downloads",
   [string]$Folder4 = "C:\Users\wojor",
-  [int]$DelayMs = 1000,
-  [int]$DelayMs2 = 500
+  [int]$DelayMs = 1200,
+  [int]$DelayMs2 = 700
 )
 
 Add-Type -AssemblyName System.Windows.Forms
@@ -95,4 +95,5 @@ Start-Sleep -Milliseconds $DelayMs2
 [Keybd]::keybd_event($VK_DOWN, 0, $KEYEVENTF_KEYUP, 0)
 [Keybd]::keybd_event($VK_LWIN, 0, $KEYEVENTF_KEYUP, 0)
 Start-Sleep -Milliseconds $DelayMs2
+
 [System.Windows.Forms.SendKeys]::SendWait("{ESC}")
